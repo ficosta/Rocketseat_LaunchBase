@@ -20,11 +20,11 @@ header {
     background: rgba(0, 0, 0, 0.1);
 }
 
-header div {
+.links{
     text-align: center;
 }
 
-header div a {
+.links a {
     color: #fff;
     font-size: 18px;
     line-height: 28px;
@@ -33,7 +33,7 @@ header div a {
     text-decoration: none;
 }
 
-header div a:hover {
+.links a:hover {
     color: var(--color-highlight);
     transition: color 500ms;
     cursor: pointer;
@@ -73,4 +73,12 @@ header div a:hover {
 
 #wrapper p a {
     color: var(--color-highlight);
+}
+
+footer a{
+    border-bottom: 1px solid var(--color-highlight);
+}
+
+footer{
+    padding: 10px;
 }
