@@ -127,6 +127,7 @@ footer {
     position: fixed;
     top: 0;
     opacity: 0;
+    visibility: hidden;
 }
 
 .modal {
@@ -148,4 +149,5 @@ footer {
 /* modal active */
 .modal-overlay.active {
     opacity: 1;
+    visibility: visible;
 }
