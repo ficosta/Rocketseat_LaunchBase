@@ -95,6 +95,7 @@ footer {
 
 .card {
     background-color: salmon;
+    cursor: pointer;
 }
 
 .card__image-container img {
