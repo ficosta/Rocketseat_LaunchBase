@@ -1,6 +1,26 @@
 const express = require('express')
-const server = express()
+const nunjucks = require('nunjucks')
 
-server.listen(5000,() => {
+const server = express()
+server.use(express.static('public'))
+
+server.set("view engine", "html")
+
+nunjucks.configure("views",{
+    express:server
+})
+
+
+server.get("/", (req, res) => {
+    return res.render("index")
+})
+
+server.get("/portfolio", (req, res) => {
+    return res.render("portfolio")
+})
+
+
+
+server.listen(5000, () => {
     console.log("Server is runing")
 })
