@@ -2,6 +2,8 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 
 const server = express()
+const videos = require("./data_videos")
+
 server.use(express.static('public'))
 
 server.set("view engine", "njk")
@@ -16,7 +18,7 @@ server.get("/", (req, res) => {
 })
 
 server.get("/portfolio", (req, res) => {
-    return res.render("portfolio")
+    return res.render("portfolio", {items: videos})
 })
 
 

@@ -96,6 +96,7 @@ footer {
 .card {
     background-color: salmon;
     cursor: pointer;
+    display: grid;
 }
 
 .card__image-container img {
@@ -109,6 +110,7 @@ footer {
 .card__info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .card__price {

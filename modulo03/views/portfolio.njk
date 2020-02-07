@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
 
@@ -13,54 +13,26 @@
     </div>
 
     <section class="cards">
-        <div class="card" id="7Rw1PdcLUTg">
+
+        {% for item in items %}
+
+
+
+        <div class="card" id="{{ item.id }}">
             <div class="card__image-container">
-                <img src="https://img.youtube.com/vi/7Rw1PdcLUTg/maxresdefault.jpg" alt="">
+                <img src="{{ item.image }}" alt="">
             </div>
             <div class="card__content">
-                <p>Vizrt introdução - Aula 1 </p>
+                <p>{{ item.title }}</p>
             </div>
             <div class="card__info">
-                <p>10 minutos</p>
+                <p>{{ item.duration }}</p>
                 <p class="card__price">Free</p>
             </div>
         </div>
-        <div class="card" id="7Rw1PdcLUTg">
-            <div class="card__image-container">
-                <img src="https://img.youtube.com/vi/7Rw1PdcLUTg/maxresdefault.jpg" alt="">
-            </div>
-            <div class="card__content">
-                <p>Vizrt introdução - Aula 1 </p>
-            </div>
-            <div class="card__info">
-                <p>10 minutos</p>
-                <p class="card__price">Free</p>
-            </div>
-        </div>
-        <div class="card" id="0DopMhnx3nU">
-            <div class="card__image-container">
-                <img src="https://img.youtube.com/vi/7Rw1PdcLUTg/maxresdefault.jpg" alt="">
-            </div>
-            <div class="card__content">
-                <p>Vizrt introdução - Aula 1 </p>
-            </div>
-            <div class="card__info">
-                <p>10 minutos</p>
-                <p class="card__price">Free</p>
-            </div>
-        </div>
-        <div class="card" id="ZsBru34g95U">
-            <div class="card__image-container">
-                <img src="https://img.youtube.com/vi/7Rw1PdcLUTg/maxresdefault.jpg" alt="">
-            </div>
-            <div class="card__content">
-                <p>Vizrt introdução - Aula 1 </p>
-            </div>
-            <div class="card__info">
-                <p>10 minutos</p>
-                <p class="card__price">Free</p>
-            </div>
-        </div>
+        
+        {% endfor %}
+
     </section>
 
     <div class="modal-overlay">
