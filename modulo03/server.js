@@ -4,7 +4,7 @@ const nunjucks = require('nunjucks')
 const server = express()
 server.use(express.static('public'))
 
-server.set("view engine", "html")
+server.set("view engine", "njk")
 
 nunjucks.configure("views",{
     express:server
@@ -12,7 +12,7 @@ nunjucks.configure("views",{
 
 
 server.get("/", (req, res) => {
-    return res.render("index")
+    return res.render("about")
 })
 
 server.get("/portfolio", (req, res) => {
