@@ -21,6 +21,9 @@
         <div class="card" id="{{ item.id }}">
             <div class="card__image-container">
                 <img src="{{ item.image }}" alt="">
+                {% if item.featured %}
+                    <div class="featured">Featured</div>
+                {% endif %}
             </div>
             <div class="card__content">
                 <p>{{ item.title }}</p>
