@@ -99,8 +99,21 @@ footer {
     display: grid;
 }
 
+.featured__wrapper.card__image-container{
+    position: relative;
+}
+
 .card__image-container img {
     width: 100%;
+}
+
+.featured{
+    background-color: #f6252b;
+    position: absolute;
+    padding: 5px 8px;
+    border-radius: 21px;
+    right: -4px;
+    top: -5px;
 }
 
 .card__content, .card__info {
