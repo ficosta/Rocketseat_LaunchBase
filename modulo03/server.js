@@ -8,8 +8,8 @@ server.use(express.static('public'))
 
 server.set("view engine", "njk")
 
-nunjucks.configure("views",{
-    express:server
+nunjucks.configure("views", {
+    express: server
 })
 
 
@@ -18,12 +18,22 @@ server.get("/", (req, res) => {
 })
 
 server.get("/portfolio", (req, res) => {
-    return res.render("portfolio", {items: videos})
+    return res.render("portfolio", { items: videos })
 })
 
-server.get("/video", (req, res)=>{
+server.get("/video", (req, res) => {
     const id = req.query.id;
-    return res.send(id)
+    const video = videos.find(function (video) {
+        if (video.id == id) {
+            return true;
+        }
+    })
+
+    if (!video) {
+        return res.send("video not found")
+    }
+
+    return res.render("video", { video })
 })
 
 
