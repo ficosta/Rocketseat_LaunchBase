@@ -21,6 +21,10 @@ server.get("/portfolio", (req, res) => {
     return res.render("portfolio", {items: videos})
 })
 
+server.get("/video", (req, res)=>{
+    const id = req.query.id;
+    return res.send(id)
+})
 
 
 server.listen(5000, () => {
