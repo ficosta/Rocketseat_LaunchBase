@@ -174,3 +174,22 @@ iframe{
     position: absolute;
     top: 5%;
 }
+
+/* Video page */
+
+.video{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card__video-container{
+    position: relative;
+    padding-top: 50%;
+}
+
+.card__video-container iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+}

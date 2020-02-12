@@ -12,7 +12,6 @@ nunjucks.configure("views", {
     express: server
 })
 
-
 server.get("/", (req, res) => {
     return res.render("about")
 })
@@ -24,19 +23,17 @@ server.get("/portfolio", (req, res) => {
 server.get("/video", (req, res) => {
     const id = req.query.id;
     const video = videos.find(function (video) {
-        if (video.id == id) {
-            return true;
-        }
+        return video.id == id 
     })
 
     if (!video) {
         return res.send("video not found")
     }
 
-    return res.render("video", { video })
+    return res.render("video", { item: video })
 })
 
 
-server.listen(5000, () => {
+server.listen(3000, () => {
     console.log("Server is runing")
 })
