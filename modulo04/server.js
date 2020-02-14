@@ -17,5 +17,5 @@ nunjucks.configure("views", {
 })
 
 server.listen(3000, function(){
-    console.log("Server rodando!")
+    console.log("Server rodando! Na porta 3000")
 })
