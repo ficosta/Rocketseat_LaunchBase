@@ -97,7 +97,7 @@ header{
 /* Detalhes do Card */
 
 .details{
-    padding: 32px 0px 0px 32px;
+    padding: 32px;
 }
 .details .item{
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -143,4 +143,33 @@ border: none;
  font-weight: bold;
  text-transform: uppercase;
  font-size: 12px;
+}
+
+form input{
+    width: 100%;
+    outline: none;
+    color #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type="radio"]{
+    width: initial;
+    margin-right: 4px;
+}
+
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"]{
+    padding: 8px 32px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin-top: 32px;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    
 }
