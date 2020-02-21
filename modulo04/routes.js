@@ -10,7 +10,8 @@ routes.get("/instructors", function (req, res) {
 })
 
 routes.post("/instructors", function (req, res) {
-    return res.render("instructors/index")
+
+    res.send(req.body)
 })
 
 routes.get("/instructors/create", function (req, res) {

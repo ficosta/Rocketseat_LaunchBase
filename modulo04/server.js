@@ -1,11 +1,12 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 const routes = require('./routes')
+const bodyParser = require('body-parser');
 
 const server = express()
 
 server.use(express.static('public'))
-
+server.use(bodyParser.json());
 server.use(routes)
 
 server.set("view engine", "njk")
