@@ -6,8 +6,9 @@ const bodyParser = require('body-parser');
 const server = express()
 
 server.use(express.static('public'))
-server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: false }))
 server.use(routes)
+
 
 server.set("view engine", "njk")
 
