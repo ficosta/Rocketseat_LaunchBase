@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px rgba(255, 0, 0, 0.503) solid;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    max-width: 940px;
+    margin: 0 auto;
+}
+main{
+    max-width: 940px;
+    margin: 0 auto;
+}
+nav{
+    height: 93px;
+    display: flex;
+    align-items: center;
+}
+.logo, .links{
+    display: inline;
+}
+.links{
+    padding-left: 122px;
+}
+.links a{
+    padding-right: 30px;
+    font-size: 16px;
+    color: #111111;
+    text-decoration: none;
+}
+.banner{
+    background-color: #fbdfdb;
+    height: 366px;
+    border-radius: 30px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.banner h1{
+    font-weight: bold;
+    padding: 117px 0px 0px 60px;
+    font-size: 32px;
+}
+.banner p{
+    font-weight:normal;
+    font-size: 18px;
+    padding: 10px 0px 0px 60px;
+    max-width: 316px;
+    opacity: 70%;
+    line-height: 28px;
+}
+.banner img{
+    height: 300px;
+    position: absolute;
+    top: 66px;
+    right: 100px;
+}
+.lista-receitas h2{
+    padding: 50px 0px 20px 0px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
+}
+.card img{
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+.card h1{
+    font-size: 18px;
+    padding-top: 20px;
+    font-weight: normal;
+}
+
+.card span{
+    font-size: 14px;
+    font-weight: normal;
+    color: #777;
+    padding-top: 5px;
+}
+footer{
+    padding: 50px 0px 0px;
+}
+.footer-text{
+    background-color: #eee;
+    color: #999;
+    height: 62px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
